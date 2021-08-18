@@ -12,6 +12,7 @@ namespace Cortana.Controllers
         // GET: Roles
         public ActionResult Index()
         {
+            //coneccion base de datos//
             using (var bd = new inventario2021Entities())
 
             {
