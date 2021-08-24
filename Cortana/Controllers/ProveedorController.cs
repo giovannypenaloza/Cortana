@@ -77,16 +77,15 @@ namespace Cortana.Controllers
             {
                 using (var db = new inventario2021Entities())
                 {
-                    var findUser = db.proveedor.Find(id);
-                    db.proveedor.Remove(findUser);
+                    var findproveedor = db.proveedor.Find(id);
+                    db.proveedor.Remove(findproveedor);
                     db.SaveChanges();
                     return RedirectToAction("Index");
-
                 }
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("", "error" + ex);
+                ModelState.AddModelError("", "error " + ex);
                 return View();
             }
         }
