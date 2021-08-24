@@ -5,11 +5,12 @@ using System.Web;
 using System.Web.Mvc;
 using Cortana.Models;
 
+
 namespace Cortana.Controllers
 {
-    public class UsuarioRolController : Controller
+    public class Usuario_RolController : Controller
     {
-        // GET: UsuarioRol
+        // GET: Usuario_Rol
         public ActionResult Index()
         {
             using (var db = new inventario2021Entities())
@@ -35,7 +36,7 @@ namespace Cortana.Controllers
             }
         }
 
-        public ActionResult ListarUsuario()
+        public ActionResult ListaUsuario()
         {
             using (var db = new inventario2021Entities())
             {
@@ -43,7 +44,7 @@ namespace Cortana.Controllers
             }
         }
 
-        public ActionResult ListarRol()
+        public ActionResult ListaRol()
         {
             using (var db = new inventario2021Entities())
             {
@@ -51,7 +52,6 @@ namespace Cortana.Controllers
             }
         }
 
-        // crear
 
         public ActionResult Create()
         {
@@ -80,8 +80,6 @@ namespace Cortana.Controllers
                 return View();
             }
         }
-
-        //detalles
 
         public ActionResult Details(int id)
         {
@@ -122,8 +120,6 @@ namespace Cortana.Controllers
             }
         }
 
-        //eliminar
-
         public ActionResult Delete(int id)
         {
             try
@@ -144,3 +140,4 @@ namespace Cortana.Controllers
         }
     }
 }
+            
