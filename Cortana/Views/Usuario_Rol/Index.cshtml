@@ -24,10 +24,10 @@
     {
         <tr>
             <td>
-                @Cortana.Controllers.Usuario_RolController.Descripcion_Rol(item.idUsuario)
+                @Cortana.Controllers.Usuario_RolController.Descripcion_Rol(item.idRol)
             </td>
             <td>
-                @Cortana.Controllers.Usuario_RolController.Nombre_Usuario(item.idRol)
+                @Cortana.Controllers.Usuario_RolController.Nombre_Usuario(item.idUsuario)
             </td>
             <td>
                 @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
