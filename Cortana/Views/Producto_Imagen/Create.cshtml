@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Crear</h2>
+<h2>Crear Nuevo</h2>
 
 @using (Html.BeginForm())
 {
@@ -23,7 +23,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.id_producto, "id_producto", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.id_producto, "Producto", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.Action("ListaProducto")
                 @Html.ValidationMessageFor(model => model.id_producto, "", new { @class = "text-danger" })
@@ -39,5 +39,5 @@
 }
 
 <div>
-    @Html.ActionLink("Volver Al Index", "Index")
+    @Html.ActionLink("Volver Al Menu", "Index")
 </div>

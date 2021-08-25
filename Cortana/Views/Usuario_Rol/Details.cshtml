@@ -4,10 +4,10 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Detalles de</h2>
 
 <<div>
-    <h4>usuariorol</h4>
+    <h4>usuario rol</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -15,7 +15,7 @@
         </dt>
 
         <dd>
-            @Cortana.Controllers.UsuarioRolController.Descripcion_Rol(Model.idRol)
+            @Cortana.Controllers.Usuario_RolController.Descripcion_Rol(Model.idRol)
         </dd>
 
         <dt>
@@ -23,12 +23,12 @@
         </dt>
 
         <dd>
-            @Cortana.Controllers.UsuarioRolController.Nombre_Usuario(Model.idUsuario)
+            @Cortana.Controllers.Usuario_RolController.Nombre_Usuario(Model.idUsuario)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Volver Al Menu", "Index")
 </p>
