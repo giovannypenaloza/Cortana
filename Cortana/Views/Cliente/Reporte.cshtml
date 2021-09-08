@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Cortana.Models.Reporte>
+
+
+@{
+    ViewBag.Title = "Reporte";
+}
+
+<h2>Reporte</h2>
+
+<table class="table">
+    <tr>
+
+        
+        <th>Cliente</th>
+        <th>Documentocliente</th>
+        <th>TotalCompra</th>
+    </tr>
+    @foreach(var item in Model)
+
+    {
+    <tr>
+        <td>@Html.DisplayFor(Modelitem => item.NombreCliente)</td>
+        <td>@Html.DisplayFor(Modelitem => item.Documentocliente)</td>
+        <td>@Html.DisplayFor(Modelitem => item.TotalCompra)</td>
+    </tr>
+    }
+          
+
+
+</table>
+
+
+@Html.ActionLink("Imprimir Reporte", "PdfReporte");

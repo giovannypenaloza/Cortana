@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Cortana.Models;
+using Rotativa;
 
 namespace Cortana.Controllers
 {
@@ -137,5 +138,37 @@ namespace Cortana.Controllers
                 return View();
             }
         }
+
+
+        public ActionResult Reporte()
+        {
+            try
+            {
+                var db = new inventario2021Entities();
+                var query = from tabCliente in db.cliente
+                            join tabCompra in db.compra on tabCliente.id equals tabCompra.id_cliente
+                            select new Reporte
+                            {
+                                NombreCliente = tabCliente.nombre,
+                                Documentocliente = tabCliente.documento,                               
+                                TotalCompra = tabCompra.total,
+                            };
+                return View(query);
+
+            }
+            catch(Exception ex)
+            {
+                ModelState.AddModelError("", "error" + ex);
+                return View();
+            }
+        }
+
+        public ActionResult PdfReporte()
+
+        {
+            return new ActionAsPdf("Reporte") { FileName = "Reporte.pdf" };
+
+        }
+
     }
 }
