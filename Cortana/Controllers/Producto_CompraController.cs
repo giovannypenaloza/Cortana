@@ -9,6 +9,7 @@ namespace Cortana.Controllers
 {
     public class Producto_CompraController : Controller
     {
+        [Authorize]
         // GET: Producto_Compra
         //Index
         public ActionResult Index()

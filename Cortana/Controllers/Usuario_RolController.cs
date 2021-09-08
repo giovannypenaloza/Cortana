@@ -10,6 +10,7 @@ namespace Cortana.Controllers
 {
     public class Usuario_RolController : Controller
     {
+       [Authorize]
         // GET: Usuario_Rol
         public ActionResult Index()
         {

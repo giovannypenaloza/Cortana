@@ -9,6 +9,7 @@ namespace Cortana.Controllers
 {
     public class ClienteController : Controller
     {
+        [Authorize]
         // GET: Cliente
         public ActionResult Index()
         {
