@@ -8,6 +8,7 @@ using System.Web.Security;
 using System.Text;
 
 
+
 namespace Cortana.Controllers
 {
     
@@ -197,5 +198,7 @@ namespace Cortana.Controllers
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
         }
+        
+
     }
 }
