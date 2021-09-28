@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Cortana.Models;
 using Rotativa;
 using System.IO;
+using System.Web.Routing;
 
 namespace Cortana.Controllers
 {
@@ -238,5 +239,34 @@ namespace Cortana.Controllers
             }
         }
 
+
+        public ActionResult PaginadorIndex(int pagina = 1)
+        {
+            try
+            {
+                var cantidadRegistros = 5;
+
+                using (var db = new inventario2021Entities())
+                {
+                    var cliente = db.cliente.OrderBy(x => x.id).Skip((pagina - 1) * cantidadRegistros).Take(cantidadRegistros).ToList();
+
+                    var totalRegistros = db.cliente.Count();
+                    var modelo = new ClientesIndex();
+                    modelo.Clientes = cliente;
+                    modelo.ActualPage = pagina;
+                    modelo.Total = totalRegistros;
+                    modelo.RecordsPage = cantidadRegistros;
+                    modelo.valueQueryString = new RouteValueDictionary();
+
+                    return View(modelo);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "error " + ex);
+                return View();
+            }
+        }
     }
 }

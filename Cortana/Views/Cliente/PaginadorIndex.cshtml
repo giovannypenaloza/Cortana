@@ -1,0 +1,26 @@
+﻿
+@model Cortana.Models.ClientesIndex
+
+@{
+    ViewBag.Title = "PaginadorIndex";
+}
+
+<h2>PaginadorIndex</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Nombre</th>
+        <th>Documento</th>
+        <th>Email</th>
+    </tr>
+    @foreach (var  Cliente in Model.Clientes)
+    {
+        <tr>
+            <td>@Cliente.nombre</td>
+            <td>@Cliente.documento</td>
+            <td>@Cliente.email</td>
+        </tr>
+    }
+</table>
+
+@{ Html.RenderPartial("Paginador", Model); }

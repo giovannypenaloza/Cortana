@@ -1,0 +1,33 @@
+﻿.navbar-inverse {
+    background-color: #D25C15;
+    border-color: #060606;
+}
+.navbar-inverse .navbar-nav > li > a{
+
+    color: white;
+}
+.navbar-inverse .navbar-brand 
+{
+     color: white;
+}
+.btn-primary {
+    color: white;
+    background-color: #F3921C;
+    border-color: #F3921C;
+}
+.img-responsive {
+
+    max-width: 100%;
+    height: auto;
+    display: block;
+    
+}
+
+.body
+{
+    font-family: "Times New Roman", sans-serif;
+}
+
+
+
+

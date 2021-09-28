@@ -7,6 +7,7 @@
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/content/custom.css")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -37,17 +38,19 @@
 
 
 
-                                <li>@Html.ActionLink("Cliente Crud", "Index", "Cliente")</li>
-                                <li>@Html.ActionLink("Compra Crud", "Index", "Compra")</li>
-                                <li>@Html.ActionLink("Usuario Crud", "Index", "Usuario")</li>
-                                <li>@Html.ActionLink("Usuario_rol Crud", "Index", "Usuario_Rol")</li>
-                                <li>@Html.ActionLink("Roles Crud", "Index", "Roles")</li>
-                                <li>@Html.ActionLink("Proveedor Crud", "Index", "Proveedor")</li>
-                                <li>@Html.ActionLink("Producto_Imagen Crud", "Index", "Producto_Imagen")</li>
-                                <li>@Html.ActionLink("Producto_Compra Crud", "Index", "Producto_Compra")</li>
-                                <li>@Html.ActionLink("Producto Crud", "Index", "Producto")</li>
+                                <li>@Html.ActionLink("Cliente ", "Index", "Cliente")</li>
+                                <li>@Html.ActionLink("Compra ", "Index", "Compra")</li>
+                                <li>@Html.ActionLink("Usuario ", "Index", "Usuario")</li>
+                                <li>@Html.ActionLink("Roles ", "Index", "Roles")</li>
+                                <li>@Html.ActionLink("Producto ", "Index", "Producto")</li>
+                                <li>@Html.ActionLink("Proveedor ", "Index", "Proveedor")</li>
+                                <li>@Html.ActionLink("Usuario_rol ", "Index", "Usuario_Rol")</li>
+                                <li>@Html.ActionLink("Producto_Imagen ", "Index", "Producto_Imagen")</li>
+                                <li>@Html.ActionLink("Producto_Compra ", "Index", "Producto_Compra")</li>
 
-                                }
+
+
+
                             </ul>
                         </li>
                     }
